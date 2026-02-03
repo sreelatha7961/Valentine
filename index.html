@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 20px;
+      margin: 10px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Will you be my Valentine? 💖</h1>
+
+<button id="yes">Yes</button>
+<button id="no">No</button>
+
+<script>
+  const yesBtn = document.getElementById("yes");
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseover", () => {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 80 + "vw";
+    noBtn.style.top = Math.random() * 80 + "vh";
+    yesBtn.style.fontSize =
+      (parseFloat(window.getComputedStyle(yesBtn).fontSize) + 5) + "px";
+  });
+
+  yesBtn.onclick = () => alert("YAY 💘 See you on Valentine’s Day!");
+</script>
+
+</body>
+</html>
